@@ -1,6 +1,5 @@
 const express = require("express");
-const config = require("./config/config");
-const dbConnect = require("./config/db-config");
+const { dbConnect, config } = require("./config");
 
 const app = express();
 
