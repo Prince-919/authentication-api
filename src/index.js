@@ -1,11 +1,13 @@
 const express = require("express");
+const config = require("./config/config");
 
 const app = express();
 
 const serverStart = async () => {
   try {
-    app.listen(8000, () => {
-      console.log(`Server is running at http://localhost:${8000}`);
+    const port = config.get("port") || 8000;
+    app.listen(port, () => {
+      console.log(`Server is running at http://localhost:${port}`);
     });
   } catch (error) {
     console.error("Error starting the server:", error);
