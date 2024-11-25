@@ -5,6 +5,7 @@ const dbConnect = require("./config/db-config");
 const app = express();
 
 const serverStart = async () => {
+  l;
   try {
     await dbConnect();
     const port = config.get("port") || 8000;
