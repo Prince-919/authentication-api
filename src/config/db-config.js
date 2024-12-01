@@ -11,7 +11,7 @@ const dbConnect = async () => {
     });
     await connect(config.get("databaseUrl"));
   } catch (err) {
-    console.log(`failed to connect to database: ${err.message}`);
+    console.log(`Failed to connect to database: ${err.message}`);
     process.exit(1);
   }
 };
